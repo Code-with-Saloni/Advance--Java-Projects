@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <center>
+        <form name="Registration" action="user.jsp" onsubmit="return val()">
+            <h1>Scholarship Portal</h1>
+           
+            <img src="upload/WhatsApp Image 2024-08-31 at 09.24.32_b6271fe9.jpg" width="200" height="300" alt="WhatsApp Image 2024-08-31 at 09.24.32_b6271fe9"/>
+
+
+
+            <table border="0">
+                
+                <tbody>
+                    <tr>
+                        <td>Name: </td>
+                        <td><input type="text" name="name" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Class:</td>
+                        <td><select name="class">
+                                <option>10th</option>
+                                <option>12th</option>
+                                <option>Graduation</option>
+                                <option>Master</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Mobile No: </td>
+                        <td><input type="text" name="mobile" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="text" name="email" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td><input type="radio" name="gender" Id="gender1" value="male" />Male
+                            <input type="radio" name="gender" Id="gender2" value="female" />Female </td>
+                    </tr>
+                    <tr>
+                        <td>DOB:</td>
+                        <td><input type="date" name="date" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Roll No:</td>
+                        <td><input type="text" name="roll" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="text" name="pass" Id="pass" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Conform Password:</td>
+                        <td><input type="text" name="cpass" Id="cpass" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Register" /></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            
+            
+        </form>
+        </center>
+    <script>
+     function val()
+            {
+                var n=document.user.name.value;
+                if(n===null || n==="")
+                {
+                    alert("Name is mandatory");
+                    return false;
+                }
+                 var m = document.user.mobile.value;
+                    if( isNaN(m))                                                        
+                    {
+                        alert("Enter only numeric value");
+                        return false;  
+                    }
+                    else if(m.length !== 10)
+                    {
+                            alert ("mobile number should be 10 digit long");
+                            return false;
+                        }
+                        
+                    var e = document.user.email.value;
+                    var ap = e.indexOf("@");
+                    var dp = e.lastIndexOf(".");
+                    if(ap<1 || dp<=ap+1 || dp===(e.length-1))
+                    {
+                    alert("invalid email Format");
+                    return false;
+                    }   
+                     var g1 = document.getElementById("gender1");
+                     var g2 = document.getElementById("gender2"); 
+               
+               
+                     if(g1.checked===false && g2.checked===false )
+                    {
+                   alert("You didn't select any gender");
+                   return false;
+                    }
+                    
+                    var r = document.user.roll.value;
+                    if(r===null || r==="")
+                    {
+                            alert ("Please Enter the Roll No. ");
+                            return false;
+                     }
+                    else if(r.length > 15)
+                    {
+                      alert("Please Enter Proper Roll No. ")  
+                    }
+                    
+                   var p1 = documnet.Registration.pass.value;
+                   var p2 = documnet.Registration.Cpass.value;
+                  
+                   if(p1!== p2){
+                    alert("Password does not match");
+                    return false;
+                    }else
+                    {
+                    return true;
+                    } 
+            
+            }
+                          
+        </script>
+    </body>
+</html>
+
+    </body>
+</html>
