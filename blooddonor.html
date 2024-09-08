@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body><center>
+        <form action="donorinfo.jsp" name="donorinfo" onsubmit="return val()">
+            <table border="0">
+                    <thead>  <h1>Blood Donation Camp</h1>
+        <h2>JK Innovation Pvt ltd Amravati</h2>
+        <h3>Doners Registration</h3>
+                        <tr>
+                            <td>Enter Name</td>
+                            <td><input type="text" name="sname" value="" /></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> Enter MobNo:</td>
+                            <td><input type="text" name="mob" value="" /></td>
+                        </tr>
+                        <tr>
+                            <td>Enter EmailID:</td>
+                            <td><input type="text" name="eid" value="" /></td>
+                        </tr>
+                        <tr>
+                            <td> Enter Age</td>
+                            <td><input type="text" name="age" value="" /></td>
+                        </tr>
+                        <tr>
+                            <td>Enter weight:</td>
+                            <td><input type="text" name="wegt" value="" /></td>
+                        </tr>
+                        <tr>
+                            <td> Blood Group:</td>
+                            <td><select name="Bloodgrp">
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="B+">B+</option>
+            <option value="A+">A+</option>
+        </select></td>
+                        </tr>
+                        <tr>
+                            <td>SELECT gender:</td>
+                            <td><input type="radio" name="gender" id="m" value="male" />male<input type="radio" name="gender" id="f" value="female" />Female<br>
+        <input type="submit" value="Submit Form" />
+        <input type="reset" value="Clear" />  </td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+
+           
+        </form></center>
+        <script>
+            function val()
+            {
+            var n=document.donorinfo.Sname.value;
+            if(n===null || n==="")
+            {
+               alert("name is compulsory");
+               return false;
+            }
+            else
+            {
+                return true;
+            }
+            }
+        </script>
+    </body>
+</html>
